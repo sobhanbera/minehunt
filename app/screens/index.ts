@@ -3,4 +3,22 @@ const SCREEN_MODULE_DETAILS =
 export default SCREEN_MODULE_DETAILS;
 
 import HomeScreen from './Home';
-export {HomeScreen};
+
+import SettingsScreen from './Settings';
+import ThemeScreen from './Theme';
+import TranslateScreen from './Translate';
+
+import TutorialScreen from './Tutorial';
+import AboutScreen from './About';
+
+import GameScreen from './Game';
+
+export {
+    HomeScreen,
+    GameScreen,
+    SettingsScreen,
+    ThemeScreen,
+    TranslateScreen,
+    TutorialScreen,
+    AboutScreen,
+};
