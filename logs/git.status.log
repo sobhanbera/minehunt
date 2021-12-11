@@ -1,31 +1,20 @@
 On branch master
-Your branch is ahead of 'origin/master' by 3 commits.
+Your branch is ahead of 'origin/master' by 4 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	new file:   android/app/src/main/assets/fonts/AntDesign.ttf
-	new file:   android/app/src/main/assets/fonts/Entypo.ttf
-	new file:   android/app/src/main/assets/fonts/EvilIcons.ttf
-	new file:   android/app/src/main/assets/fonts/Feather.ttf
-	new file:   android/app/src/main/assets/fonts/FontAwesome.ttf
-	new file:   android/app/src/main/assets/fonts/FontAwesome5_Brands.ttf
-	new file:   android/app/src/main/assets/fonts/FontAwesome5_Regular.ttf
-	new file:   android/app/src/main/assets/fonts/FontAwesome5_Solid.ttf
-	new file:   android/app/src/main/assets/fonts/Fontisto.ttf
-	new file:   android/app/src/main/assets/fonts/Foundation.ttf
-	new file:   android/app/src/main/assets/fonts/Ionicons.ttf
-	new file:   android/app/src/main/assets/fonts/MaterialCommunityIcons.ttf
-	new file:   android/app/src/main/assets/fonts/MaterialIcons.ttf
-	new file:   android/app/src/main/assets/fonts/Octicons.ttf
-	new file:   android/app/src/main/assets/fonts/SimpleLineIcons.ttf
-	new file:   android/app/src/main/assets/fonts/Zocial.ttf
+	modified:   android/app/build.gradle
+	modified:   android/app/src/main/java/com/minehunt/MainApplication.java
+	modified:   android/build.gradle
+	modified:   android/settings.gradle
+	modified:   ios/Podfile
+	modified:   ios/minehunt.xcodeproj/project.pbxproj
+	modified:   ios/minehunt/Info.plist
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   android/app/build.gradle
-	modified:   android/app/src/main/java/com/minehunt/MainApplication.java
 	modified:   android/app/src/main/res/mipmap-hdpi/ic_launcher.png
 	modified:   android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png
 	modified:   android/app/src/main/res/mipmap-mdpi/ic_launcher.png
@@ -36,11 +25,6 @@ Changes not staged for commit:
 	modified:   android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
 	modified:   android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 	modified:   android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
-	modified:   android/build.gradle
-	modified:   android/settings.gradle
-	modified:   ios/Podfile
-	modified:   ios/minehunt.xcodeproj/project.pbxproj
-	modified:   ios/minehunt/Info.plist
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
 

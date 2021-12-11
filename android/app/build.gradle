@@ -195,6 +195,14 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    implementation project(':@react-native-community_slider')
+    implementation project(':@react-native-community_async-storage')
+    implementation project(':@react-native-community_blur')
+    implementation project(':react-native-linear-gradient')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-device-info')
+    implementation project(':lottie-react-native')
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }

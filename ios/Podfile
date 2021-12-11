@@ -12,6 +12,20 @@ target 'minehunt' do
     :hermes_enabled => false
   )
 
+  pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
+
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'react-native-blur', :path => '../node_modules/@react-native-community/blur'
+
   target 'minehuntTests' do
     inherit! :complete
     # Pods for testing
