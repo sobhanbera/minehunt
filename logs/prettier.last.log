@@ -1,6 +1,7 @@
 yarn run v1.22.17
 $ '/home/sobhanbera/Documents/Projects/Open Source/minehunt/node_modules/.bin/pretty-quick' --staged --pattern '**/*.*(ts|tsx|js|jsx|json)'
-🔍  Finding changed files since git revision ec29b48.
-🎯  Found 10 changed files.
+🔍  Finding changed files since git revision 1f80eb8.
+🎯  Found 2 changed files.
+✍️  Fixing up .prettierrc.js.
 ✅  Everything is awesome!
-Done in 1.83s.
+Done in 1.56s.
