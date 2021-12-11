@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 
 import MainNavigation from './screens/MainNavigation';
-import {ThemeProvider} from './themes';
+import {ThemeProvider} from './contexts';
 
 const MainApp = () => {
     return (

@@ -23,9 +23,9 @@ const DarkTheme: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
-    main: ['#0F60B6'],
+    main: ['#003785'],
     light: ['#5a8de9'],
-    dark: ['#003785'],
+    dark: ['#0f60b6'],
 
     background: ['#000000'],
 
