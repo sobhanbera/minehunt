@@ -1,14 +1,14 @@
 On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
+Your branch is ahead of 'origin/master' by 3 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   App.tsx
-	new file:   app/MainApp.tsx
-	new file:   app/screens/Home.tsx
-	new file:   app/screens/MainNavigation.tsx
-	modified:   app/screens/index.ts
+	modified:   android/app/build.gradle
+	modified:   android/app/src/main/java/com/minehunt/MainApplication.java
+	modified:   android/settings.gradle
+	modified:   package.json
+	modified:   yarn.lock
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
