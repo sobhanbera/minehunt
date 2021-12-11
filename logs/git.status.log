@@ -1,16 +1,17 @@
 On branch master
-Your branch is ahead of 'origin/master' by 16 commits.
+Your branch is ahead of 'origin/master' by 17 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   app/MainApp.tsx
-	modified:   app/themes/main/DarkTheme.ts
+	modified:   app/constants/index.ts
+	modified:   app/screens/Home.tsx
+	modified:   app/screens/Theme.tsx
+	modified:   app/styles/index.ts
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   app/screens/Home.tsx
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
 

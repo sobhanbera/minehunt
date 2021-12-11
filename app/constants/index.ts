@@ -10,3 +10,9 @@ export const MEDIUM_ICON_SIZE = 20; // medium icon size in the application
 export const LARGE_ICON_SIZE = 24; // large icon size in the application
 
 export const DEFAULT_SPACER_SIZE = 15; // the size of the spacer to provide
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from 'react';
+import {NativeModules} from 'react-native';
+const {StatusBarManager} = NativeModules;
+export const DEVICE_STATUSBAR_HEIGHT_CONSTANT = StatusBarManager.HEIGHT; // height of the status bar of android device
