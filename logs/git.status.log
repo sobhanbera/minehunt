@@ -1,11 +1,10 @@
 On branch master
-Your branch is ahead of 'origin/master' by 9 commits.
+Your branch is ahead of 'origin/master' by 10 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	new file:   app/components/IconText/index.tsx
-	new file:   app/components/MenuOption/index.tsx
+	new file:   app/components/Spacer/index.tsx
 	modified:   app/components/index.ts
 
 Changes not staged for commit:

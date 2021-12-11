@@ -5,5 +5,6 @@ export default COMPONENTS_MODULE_DETAILS;
 import Scaler from './Scaler';
 import IconText from './IconText';
 import MenuOption from './MenuOption';
+import Spacer from './Spacer';
 
-export {Scaler, IconText, MenuOption};
+export {Scaler, IconText, MenuOption, Spacer};
