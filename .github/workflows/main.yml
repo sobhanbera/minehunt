@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  # This workflow will check the formatting of code and other things
+  checks:
+    name: "Checks"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Prettier Format Check
+        run: yarn run prettier -c app
+
+  # This workflow will output some neccessary things like file structure and so on...
+  outputs:
+    name: "Outputs"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: App Directory Tree
+        run: tree app
+
+      - name: Full Project File Structure
+        run: tree
+
+# Workflow are seperated now...
