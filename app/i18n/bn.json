@@ -1,0 +1,15 @@
+{
+    "setting": {},
+    "authentication": {},
+    "words": {},
+    "sentences": {},
+    "common": {
+        "appName": "Mine Hunt",
+        "appSlogan": "Hunt for Mines",
+        "langs": {
+            "english": "English",
+            "hindi": "हिंदी",
+            "bengali": "বাংলা"
+        }
+    }
+}
