@@ -10,8 +10,22 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/blur": "^3.6.0",
+    "@react-native-community/slider": "^4.1.12",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/stack": "^6.0.11",
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "i18next": "^21.6.0",
     "react": "17.0.2",
-    "react-native": "0.66.3"
+    "react-i18next": "^11.15.0",
+    "react-native": "0.66.3",
+    "react-native-animatable": "^1.3.3",
+    "react-native-device-info": "^8.4.8",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-locale-detector": "^1.0.1",
+    "react-native-vector-icons": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -19,13 +33,18 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.4",
+    "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^26.6.3",
     "eslint": "^7.14.0",
+    "husky": "^7.0.4",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.2",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "typescript-language-server": "^0.8.1"
   },
   "resolutions": {
     "@types/react": "^17"
