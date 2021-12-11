@@ -14,9 +14,21 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {THEME_STORAGE_KEY} from '../constants';
 import ThemeColors from './ThemeProps';
 
-import {DarkTheme as DefaultTheme, LightTheme} from './main';
+import {DarkTheme as DefaultTheme, LightTheme, DarkPinkTheme} from './main';
 
-export type Themes = 'default' | 'dark' | 'light'; // here default is dark only.
+export type Themes = '' | 'default' | 'dark' | 'light' | 'darkpink'; // here default is dark only.
+interface ActualThemesModal {
+    default: ThemeColors;
+    dark: ThemeColors;
+    light: ThemeColors;
+    darkpink: ThemeColors;
+}
+const ActualThemes: ActualThemesModal = {
+    default: DefaultTheme,
+    dark: DefaultTheme,
+    light: LightTheme,
+    darkpink: DarkPinkTheme,
+};
 
 /**
  * interface for the context api we are providing through
@@ -42,27 +54,14 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
      * get theme data
      */
     const getTheme = async () => {
-        const tempTheme: Themes | any = await AsyncStorage.getItem(
-            THEME_STORAGE_KEY,
-        );
+        // default for now atleast..
+        const tempTheme: Themes = await AsyncStorage.getItem(THEME_STORAGE_KEY);
 
         if (!tempTheme) {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, 'dark');
             setTheme(DefaultTheme);
         } else {
-            switch (tempTheme) {
-                case 'default':
-                    setTheme(DefaultTheme);
-                    break;
-                case 'dark':
-                    setTheme(DefaultTheme);
-                    break;
-
-                case 'light':
-                    setTheme(LightTheme);
-                    break;
-                default:
-            }
+            setTheme(ActualThemes[tempTheme]);
         }
     };
 

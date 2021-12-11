@@ -40,21 +40,9 @@ export interface CommonColors {
  * @theme_interface + @common_colors_interface
  */
 export default interface ThemeColors extends CommonColors {
-    primary: {
-        main: string[];
-        light: string[];
-        dark: string[];
-    };
-    secondary: {
-        main: string[];
-        light: string[];
-        dark: string[];
-    };
-    accent: {
-        main: string[];
-        light: string[];
-        dark: string[];
-    };
+    main: string[];
+    light: string[];
+    dark: string[];
 
     /**
      * #000000 for dark or else #FFFFFF
@@ -71,11 +59,6 @@ export default interface ThemeColors extends CommonColors {
     border: string[];
     placeholder: string[];
     text: string[];
-
-    onSuccess: string[];
-    onError: string[];
-    onWarning: string[];
-    onDanger: string[];
 }
 
 /**

@@ -19,27 +19,15 @@ import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
  * @define as much themes you want below this comment only...
  * @and also give some sutaible detail of the corresponsing theme...
  */
-export const DarkTheme: ThemeColors = {
+const DarkTheme: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
-    primary: {
-        main: ['#0F60B6'],
-        light: ['#5a8de9'],
-        dark: ['#003785'],
-    },
-    secondary: {
-        main: ['#EF1559'],
-        light: ['#F9B5AC'],
-        dark: ['#EE7674'],
-    },
-    accent: {
-        main: ['#0077b6'],
-        light: ['#81E4DA'],
-        dark: ['#0E003E'],
-    },
+    main: ['#0F60B6'],
+    light: ['#5a8de9'],
+    dark: ['#003785'],
 
-    background: ['#101010'],
+    background: ['#000000'],
 
     themecolor: ['#000000'],
     themecolorrevert: ['#FFFFFF'],
@@ -50,14 +38,11 @@ export const DarkTheme: ThemeColors = {
     placeholder: ['#CFCFCF'],
     text: ['#EFEFEF'],
 
-    onSuccess: ['#28a745'],
-    onError: ['#FF5500'],
-    onWarning: ['#ffc107'],
-    onDanger: ['#dc3545'],
-
     ...RequiredCommonColors,
 };
 /**
  * @end of themes object themes should not be written
  * below this comment for the sake of best programming practices...
  */
+
+export default DarkTheme;
