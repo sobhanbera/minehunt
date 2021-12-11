@@ -3,15 +3,28 @@ Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	new file:   .github/ISSUE_TEMPLATE/bug_report.md
-	new file:   .github/ISSUE_TEMPLATE/custom.md
-	new file:   .github/ISSUE_TEMPLATE/feature_request.md
-	new file:   .github/workflows/main.yml
-	new file:   .github_src/icon.png
+	new file:   app/assets/index.ts
+	new file:   app/components/index.ts
+	new file:   app/constants/index.ts
+	new file:   app/contexts/index.ts
+	new file:   app/interfaces/index.ts
+	new file:   app/screens/index.ts
+	new file:   app/styles/index.ts
+	new file:   app/themes/index.ts
+	new file:   app/utils/index.ts
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
+	modified:   .eslintrc.js
+	modified:   .prettierrc.js
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app/MainApp.tsx
+	app/i18n/
+	app/screens/Home.tsx
+	app/screens/MainNavigation.tsx
 

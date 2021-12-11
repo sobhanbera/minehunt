@@ -1,0 +1,2 @@
+const UTILS_MODULE_DETAILS = 'A';
+export default UTILS_MODULE_DETAILS;
