@@ -1,5 +1,5 @@
 /**
- * © 2010 Sobyte
+ * © 2021 Minehunt
  *
  * @author : Sobhan Bera (sobhanbera)
  * @other_editors :

@@ -1,13 +1,17 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
+
 import MainNavigation from './screens/MainNavigation';
+import {ThemeProvider} from './themes';
 
 const MainApp = () => {
     return (
         <>
             <StatusBar backgroundColor={'#000000'} barStyle="light-content" />
             {/* <Contexts> */}
-            <MainNavigation />
+            <ThemeProvider>
+                <MainNavigation />
+            </ThemeProvider>
             {/* </Contexts> */}
         </>
     );
