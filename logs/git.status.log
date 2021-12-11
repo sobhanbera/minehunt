@@ -1,0 +1,25 @@
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .husky/pre-commit
+	new file:   .md
+	new file:   .node-version
+	new file:   .npmrc
+	new file:   .prettierignore
+	modified:   .prettierrc.js
+	new file:   .vimrc
+	new file:   @types/alltypes.d.ts
+	new file:   README.md
+	new file:   app.data.details.ts
+	new file:   init.vim
+	modified:   package.json
+	new file:   react-native.config.js
+	new file:   setup.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/
+
