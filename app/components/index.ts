@@ -3,5 +3,7 @@ const COMPONENTS_MODULE_DETAILS =
 export default COMPONENTS_MODULE_DETAILS;
 
 import Scaler from './Scaler';
+import IconText from './IconText';
+import MenuOption from './MenuOption';
 
-export {Scaler};
+export {Scaler, IconText, MenuOption};
