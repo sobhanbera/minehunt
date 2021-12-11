@@ -1,17 +1,14 @@
 On branch master
-Your branch is ahead of 'origin/master' by 13 commits.
+Your branch is ahead of 'origin/master' by 14 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   android/app/src/main/res/values/styles.xml
+	modified:   android/app/build.gradle
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   @types/alltypes.d.ts
-	modified:   android/app/build.gradle
-	modified:   android/build.gradle
 	modified:   app/MainApp.tsx
 	modified:   app/components/IconText/index.tsx
 	modified:   app/components/MenuOption/index.tsx
@@ -19,7 +16,6 @@ Changes not staged for commit:
 	modified:   app/constants/index.ts
 	modified:   app/screens/Home.tsx
 	modified:   app/themes/main/DarkTheme.ts
-	modified:   ios/Podfile
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
 
