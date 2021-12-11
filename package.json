@@ -38,6 +38,7 @@
         "axios": "^0.24.0",
         "dayjs": "^1.10.7",
         "i18next": "^21.6.0",
+        "lottie-react-native": "^5.0.1",
         "react": "17.0.2",
         "react-i18next": "^11.15.0",
         "react-native": "0.66.3",
