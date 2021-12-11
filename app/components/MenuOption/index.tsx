@@ -17,7 +17,7 @@ const MenuOption = (props: Props) => {
             style={styles.menuOption}
             onPress={() => props.onPress()}
             activeOpacity={0.23}
-            underlayColor={theme.main[0] + '50'}>
+            underlayColor={theme.main[0] + 'BF'}>
             <IconText icon={props.icon} text={props.text} />
         </TouchableHighlight>
     );
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     menuOption: {
         borderRadius: 4,
         overflow: 'hidden',
+        marginVertical: 5,
     },
 });
 

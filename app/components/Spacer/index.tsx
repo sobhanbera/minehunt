@@ -1,15 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
 
+import {DEFAULT_SPACER_SIZE} from '../../constants';
+
 interface Props {
-    space: number;
+    space?: number;
 }
 
 const Spacer = (props: Props) => {
     return (
         <View
             style={{
-                paddingVertical: props.space || 15,
+                paddingBottom: props.space || DEFAULT_SPACER_SIZE, // default spacer size
             }}
         />
     );

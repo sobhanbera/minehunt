@@ -1,16 +1,28 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+import {useTheme} from '../../contexts';
+
 interface Props {
     icon: React.ReactNode;
     text: string;
 }
 
 const IconText = (props: Props) => {
+    const {theme} = useTheme();
+
     return (
         <View style={styles.iconText}>
             {props.icon}
-            <Text style={styles.text}>{props.text}</Text>
+            <Text
+                style={[
+                    styles.text,
+                    {
+                        color: theme.themecolorrevert[0] + 'EF',
+                    },
+                ]}>
+                {props.text}
+            </Text>
         </View>
     );
 };
@@ -27,6 +39,7 @@ const styles = StyleSheet.create({
     text: {
         paddingHorizontal: 10,
         fontSize: 18,
+        fontWeight: '600',
     },
 });
 

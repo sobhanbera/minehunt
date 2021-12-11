@@ -8,3 +8,5 @@ export const DEFAULT_ICON_SIZE = 18; // default size of every icon in the applic
 export const SMALL_ICON_SIZE = 16; // small icon size
 export const MEDIUM_ICON_SIZE = 20; // medium icon size in the application
 export const LARGE_ICON_SIZE = 24; // large icon size in the application
+
+export const DEFAULT_SPACER_SIZE = 15; // the size of the spacer to provide
