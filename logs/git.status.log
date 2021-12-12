@@ -1,24 +1,10 @@
 On branch master
-Your branch is ahead of 'origin/master' by 5 commits.
+Your branch is ahead of 'origin/master' by 6 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   app/interfaces/index.ts
-	modified:   app/themes/ThemeProvider.tsx
-	new file:   app/themes/main/DarkBlue.ts
-	new file:   app/themes/main/DarkGreen.ts
-	modified:   app/themes/main/DarkPink.ts
-	new file:   app/themes/main/DarkRed.ts
-	modified:   app/themes/main/DarkTheme.ts
-	new file:   app/themes/main/DarkYellow.ts
-	new file:   app/themes/main/LightBlue.ts
-	new file:   app/themes/main/LightGreen.ts
-	new file:   app/themes/main/LightPink.ts
-	new file:   app/themes/main/LightRed.ts
-	modified:   app/themes/main/LightTheme.ts
-	new file:   app/themes/main/LightYellow.ts
-	modified:   app/themes/main/index.ts
+	new file:   test.css
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -27,10 +13,7 @@ Changes not staged for commit:
 	modified:   app/screens/HomeScreen.tsx
 	modified:   app/screens/MainNavigation.tsx
 	modified:   app/screens/ThemeScreen.tsx
+	modified:   app/styles/index.ts
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	test.css
 
