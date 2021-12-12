@@ -358,3 +358,79 @@ export const LanguagesList: LanguageData[] = [
         placeholder: 'Hindi',
     },
 ];
+
+/**
+ * game types & games difficuly list
+ * starts from here
+ */
+type GameDifficulties =
+    | 'beginner'
+    | 'easy'
+    | 'medium'
+    | 'advance'
+    | 'expert'
+    | 'professional'
+    | 'legend'
+    | 'custom';
+
+export type GameType = 'custom' | 'new' | '';
+
+export interface GameData {
+    id: number;
+    difficulty: GameDifficulties;
+    mines: number;
+    rows: number;
+    columns: number;
+}
+
+export const GameTypesList: GameData[] = [
+    {
+        id: 1,
+        difficulty: 'beginner',
+        mines: 6,
+        rows: 6,
+        columns: 6,
+    },
+    {
+        id: 2,
+        difficulty: 'easy',
+        mines: 16,
+        rows: 10,
+        columns: 10,
+    },
+    {
+        id: 3,
+        difficulty: 'medium',
+        mines: 47,
+        rows: 16,
+        columns: 16,
+    },
+    {
+        id: 4,
+        difficulty: 'advance',
+        mines: 94,
+        rows: 25,
+        columns: 25,
+    },
+    {
+        id: 5,
+        difficulty: 'expert',
+        mines: 208,
+        rows: 36,
+        columns: 36,
+    },
+    {
+        id: 6,
+        difficulty: 'professional',
+        mines: 400,
+        rows: 50,
+        columns: 50,
+    },
+    {
+        id: 7,
+        difficulty: 'legend',
+        mines: 596,
+        rows: 63,
+        columns: 63,
+    },
+];
