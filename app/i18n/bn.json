@@ -1,6 +1,16 @@
 {
-    "setting": {},
-    "authentication": {},
+    "home": {
+        "continue": "চালিয়ে যান",
+        "new_game": "নতুন খেলা",
+        "start_custom_game": "কাস্টম খেলা শুরু করুন",
+        "update_theme": "থিম আপডেট করুন",
+        "settings": "সেটিংস",
+        "change_lang": "ভাষা পরিবর্তন করুন",
+        "stats": "পরিসংখ্যান",
+        "game_rules": "খেলার নিয়ম",
+        "about": "বিস্তারিত",
+        "remove_ads": "বিজ্ঞাপন সরান?"
+    },
     "words": {},
     "sentences": {},
     "common": {

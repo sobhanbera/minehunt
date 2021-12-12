@@ -129,7 +129,12 @@ export default function ThemeScreen(props: Props) {
                                  * both are same in that way we will be rendering the same theme data two times
                                  */
                                 if (index) {
-                                    return <ThemeCard theme={theme} />;
+                                    return (
+                                        <ThemeCard
+                                            theme={theme}
+                                            key={theme.id}
+                                        />
+                                    );
                                 } else {
                                     return null;
                                 }
@@ -157,7 +162,9 @@ export default function ThemeScreen(props: Props) {
                                  * here we haven't given the same condition because the light theme is neither the default
                                  * nor it is in the first position
                                  */
-                                return <ThemeCard theme={theme} />;
+                                return (
+                                    <ThemeCard theme={theme} key={theme.id} />
+                                );
                             })}
                     </View>
 
@@ -178,7 +185,9 @@ export default function ThemeScreen(props: Props) {
                                  * here we haven't given the same condition because the light theme is neither the default
                                  * nor it is in the first position
                                  */
-                                return <ThemeCard theme={theme} />;
+                                return (
+                                    <ThemeCard theme={theme} key={theme.id} />
+                                );
                             })}
                     </View>
                 </View>

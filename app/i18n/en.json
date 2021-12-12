@@ -1,6 +1,16 @@
 {
-    "setting": {},
-    "authentication": {},
+    "home": {
+        "continue": "Continue",
+        "new_game": "New Game",
+        "start_custom_game": "Start Custom Game",
+        "update_theme": "Update Theme",
+        "settings": "Settings",
+        "change_lang": "Change Language",
+        "stats": "Stats",
+        "game_rules": "Game Rules",
+        "about": "About",
+        "remove_ads": "Remove Ads?"
+    },
     "words": {},
     "sentences": {},
     "common": {

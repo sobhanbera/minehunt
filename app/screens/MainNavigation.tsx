@@ -23,7 +23,7 @@ import {useTheme} from '../contexts';
 // the main stack navigator for the application..
 const MainStackNavigator = createStackNavigator();
 export default function MainNavigation() {
-    const {theme} = useTheme();
+    const {theme, themeColors} = useTheme();
 
     return (
         <NavigationContainer
@@ -31,6 +31,10 @@ export default function MainNavigation() {
             <MainStackNavigator.Navigator
                 screenOptions={{
                     headerShown: false,
+
+                    cardStyle: {
+                        backgroundColor: themeColors.background[0],
+                    },
                 }}>
                 {/* main entry screen */}
                 <MainStackNavigator.Screen

@@ -1,6 +1,16 @@
 {
-    "setting": {},
-    "authentication": {},
+    "home": {
+        "continue": "जारी रखें",
+        "new_game": "नया खेल",
+        "start_custom_game": "कस्टम गेम शुरू करें",
+        "update_theme": "अद्यतन विषय",
+        "settings": "समायोजन",
+        "change_lang": "भाषा बदलो",
+        "stats": "आँकड़े",
+        "game_rules": "खेल के नियमों",
+        "about": "विवरण",
+        "remove_ads": "विज्ञापन हटाएँ?"
+    },
     "words": {},
     "sentences": {},
     "common": {

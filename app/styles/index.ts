@@ -16,6 +16,9 @@ const globalStyles = StyleSheet.create({
         justifyContent: 'center',
         flex: 1,
     },
+    homeLayout: {
+        paddingVertical: 60,
+    },
 
     statusBar: {
         paddingTop: DEVICE_STATUSBAR_HEIGHT_CONSTANT,

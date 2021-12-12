@@ -323,3 +323,38 @@ export const ThemesList: ActualThemesModal = {
         other: true,
     },
 };
+
+/**
+ * language stuffs starts from here
+ * like language code
+ * types of language
+ * and all such things
+ */
+export type LanguageCode = 'en' | 'bn' | 'hi';
+
+export interface LanguageData {
+    code: LanguageCode;
+    lang: string;
+    placeholder: string;
+}
+
+/**
+ * all languages list...
+ */
+export const LanguagesList: LanguageData[] = [
+    {
+        code: 'en',
+        lang: 'English',
+        placeholder: 'English',
+    },
+    {
+        code: 'bn',
+        lang: 'বাংলা',
+        placeholder: 'Bengali',
+    },
+    {
+        code: 'hi',
+        lang: 'हिंदी',
+        placeholder: 'Hindi',
+    },
+];

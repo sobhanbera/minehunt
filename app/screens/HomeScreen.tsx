@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -16,6 +17,7 @@ interface Props {
     };
 }
 export default function HomeScreen(props: Props) {
+    const {t} = useTranslation();
     const {themeColors} = useTheme();
 
     const launchScreen = (screenName: string, data?: Object) => {
@@ -23,16 +25,11 @@ export default function HomeScreen(props: Props) {
     };
 
     return (
-        <View
-            style={[
-                {
-                    backgroundColor: themeColors.background[0],
-                },
-                appstyles.flex,
-                appstyles.statusBar,
-            ]}>
-            <ScrollView>
-                <View style={[appstyles.mainLayout]}>
+        <ScrollView
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}>
+            <View style={[appstyles.flex, appstyles.homeLayout]}>
+                <View style={appstyles.mainLayout}>
                     <Text
                         style={[
                             styles.title,
@@ -45,7 +42,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* continue the previous game */}
                     <MenuOption
-                        text="Continue"
+                        text={t('home:continue')}
                         icon={
                             <AntDesign
                                 name="caretright"
@@ -60,7 +57,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* start new game button */}
                     <MenuOption
-                        text="New Game"
+                        text={t('home:new_game')}
                         icon={
                             <AntDesign
                                 name="plus"
@@ -73,7 +70,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* custom game grid button */}
                     <MenuOption
-                        text="Start Custom Game"
+                        text={t('home:start_custom_game')}
                         icon={
                             <MaterialIcons
                                 name="dashboard-customize"
@@ -88,7 +85,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* update application theme */}
                     <MenuOption
-                        text="Update Theme"
+                        text={t('home:update_theme')}
                         icon={
                             <Ionicons
                                 name="ios-sunny-outline"
@@ -101,7 +98,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* all settings */}
                     <MenuOption
-                        text="Settings"
+                        text={t('home:settings')}
                         icon={
                             <Ionicons
                                 name="ios-settings-outline"
@@ -114,7 +111,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* all settings */}
                     <MenuOption
-                        text="Change Language"
+                        text={t('home:change_lang')}
                         icon={
                             <Ionicons
                                 name="ios-language-outline"
@@ -129,7 +126,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* game statistics */}
                     <MenuOption
-                        text="Stats"
+                        text={t('home:stats')}
                         icon={
                             <Ionicons
                                 name="ios-stats-chart"
@@ -144,7 +141,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* all game rules */}
                     <MenuOption
-                        text="Game Rules"
+                        text={t('home:game_rules')}
                         icon={
                             <MaterialIcons
                                 name="rule"
@@ -157,7 +154,7 @@ export default function HomeScreen(props: Props) {
 
                     {/* application about section launcher button */}
                     <MenuOption
-                        text="About!"
+                        text={t('home:about')}
                         icon={
                             <MaterialIcons
                                 name="info-outline"
@@ -170,9 +167,9 @@ export default function HomeScreen(props: Props) {
 
                     <Spacer />
 
-                    {/* remove ads button */}
-                    <MenuOption
-                        text="Remove Ads?"
+                    {/* TODO: remove ads button */}
+                    {/* <MenuOption
+                        text={t('home:remove_ads')}
                         icon={
                             <MaterialIcons
                                 name="monetization-on"
@@ -183,10 +180,10 @@ export default function HomeScreen(props: Props) {
                         onPress={() => {
                             console.log('Ads Removed!');
                         }}
-                    />
+                    /> */}
                 </View>
-            </ScrollView>
-        </View>
+            </View>
+        </ScrollView>
     );
 }
 
