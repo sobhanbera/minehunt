@@ -33,13 +33,13 @@ interface ThemeContextProps {
  */
 const ThemeContext = createContext<ThemeContextProps>({
     theme: 'dark',
-    themeName: 'dark',
+    themeName: 'themedarkayu',
     themeColors: ThemesList.default.theme,
     setTheme: (_theme: Themes) => {},
 });
 const ThemeProvider = (props: {children: React.ReactChild}) => {
     const [themeType, setThemeType] = useState<ThemeType>('dark');
-    const [themeName, setThemeName] = useState<Themes>('dark');
+    const [themeName, setThemeName] = useState<Themes>('themedarkayu');
     const [themeColor, setThemeColor] = useState<ThemeColors>(
         ThemesList.default.theme,
     );
@@ -53,15 +53,13 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
 
         if (!tempTheme) {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, 'dark');
-            setThemeColor(ThemesList.default.theme);
+            setThemeColor(ThemesList.themedarkayu.theme);
             setThemeType('dark');
-            setThemeName('dark');
-            console.log('dark', 'dark');
+            setThemeName('themedarkayu');
         } else {
             setThemeColor(ThemesList[tempTheme].theme);
             setThemeType(ThemesList[tempTheme].type);
             setThemeName(ThemesList[tempTheme].name);
-            console.log(ThemesList[tempTheme].name, ThemesList[tempTheme].type);
         }
     };
 

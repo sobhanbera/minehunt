@@ -9,7 +9,7 @@ import {useTheme} from '../contexts';
 import {Header} from '../components';
 import {ThemesList, ThemeData} from '../interfaces';
 import {Scaler} from '../components';
-import {MEDIUM_ICON_SIZE} from '../constants';
+import {DEFAULT_THEME_NAME, MEDIUM_ICON_SIZE} from '../constants';
 
 interface ThemeCardProps {
     theme: ThemeData;
@@ -87,7 +87,7 @@ interface Props {
     };
 }
 export default function ThemeScreen(props: Props) {
-    const {themeColors} = useTheme();
+    const {themeColors, setTheme} = useTheme();
 
     return (
         <View
@@ -97,10 +97,23 @@ export default function ThemeScreen(props: Props) {
                 },
                 appstyles.flex,
             ]}>
-            <Header navigation={props.navigation} title="Choose Theme" />
+            <Header
+                navigation={props.navigation}
+                title="Choose Theme"
+                morebutton={
+                    <AntDesign
+                        name="reload1"
+                        size={MEDIUM_ICON_SIZE}
+                        color={themeColors.text[0]}
+                        onPress={() => setTheme(DEFAULT_THEME_NAME)}
+                    />
+                }
+            />
 
-            <ScrollView>
-                <View>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}>
+                <View style={appstyles.paddingBottom}>
                     {/**
                      * first we will render all the dark themes then we will render all the light themes
                      * we are rendering dark themes here...

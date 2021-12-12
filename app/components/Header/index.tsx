@@ -10,7 +10,10 @@ import {
 } from 'react-native';
 
 import Entypo from 'react-native-vector-icons/Entypo';
-import {DEVICE_STATUSBAR_HEIGHT_CONSTANT} from '../../constants';
+import {
+    DEVICE_STATUSBAR_HEIGHT_CONSTANT,
+    MEDIUM_ICON_SIZE,
+} from '../../constants';
 import {useTheme} from '../../contexts';
 
 interface Props {
@@ -24,7 +27,7 @@ interface Props {
     style?: StyleProp<ViewStyle>;
 }
 const Header = (props: Props) => {
-    const {border, themecolorrevert, background} = useTheme().themeColors;
+    const {border, text, background} = useTheme().themeColors;
 
     return (
         <View
@@ -41,15 +44,15 @@ const Header = (props: Props) => {
             <Pressable onPress={() => props.navigation.goBack()}>
                 <Entypo
                     name="chevron-thin-left"
-                    color={themecolorrevert[0] + 'DF'}
-                    size={20}
+                    color={text[0] + 'DF'}
+                    size={MEDIUM_ICON_SIZE}
                 />
             </Pressable>
             <Text
                 style={[
                     styles.title,
                     {
-                        color: themecolorrevert[0] + 'DF',
+                        color: text[0] + 'DF',
                         paddingHorizontal: 20,
                     },
                 ]}
@@ -57,7 +60,11 @@ const Header = (props: Props) => {
                 {props.title}
             </Text>
             {/* this below is a temporary component for making the parent center the title text component */}
-            <Text style={{fontSize: 20}}>{'   '}</Text>
+            {props.morebutton ? (
+                props.morebutton
+            ) : (
+                <Text style={{fontSize: 20}}>{'   '}</Text>
+            )}
         </View>
     );
 };

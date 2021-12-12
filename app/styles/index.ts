@@ -30,6 +30,10 @@ const globalStyles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 12,
     },
+
+    paddingBottom: {
+        paddingBottom: 100,
+    },
 });
 
 export {globalStyles as appstyles};
