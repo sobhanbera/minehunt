@@ -7,5 +7,6 @@ import IconText from './IconText';
 import MenuOption from './MenuOption';
 import Spacer from './Spacer';
 import Header from './Header';
+import Button from './Button';
 
-export {Scaler, IconText, MenuOption, Spacer, Header};
+export {Scaler, IconText, MenuOption, Spacer, Header, Button};
