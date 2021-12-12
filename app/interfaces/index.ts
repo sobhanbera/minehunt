@@ -23,6 +23,14 @@ import {
     ThemeDarkGruvbox,
     ThemeDarkOneDarkPro,
     ThemeDarkPurples,
+
+    // light extra themes
+    ThemeLightAtom,
+    ThemeLightGruvbox,
+    ThemeLightIceberg,
+    ThemeLightMonokai,
+    ThemeLightPaperColor,
+    ThemeLightStrawberry,
 } from '../themes/main';
 
 const INTERFACES_MODULE_DETAILS =
@@ -58,7 +66,15 @@ export type Themes =
     | 'themedarkpurples'
     | 'themedarkayu'
     | 'themedarkfalcon'
-    | 'themedarkgithub';
+    | 'themedarkgithub'
+
+    // other light extra themes
+    | 'themelightatom'
+    | 'themelightgruvbox'
+    | 'themelighticeberg'
+    | 'themelightmonokai'
+    | 'themelightpapercolor'
+    | 'themelightstrawberry';
 
 export interface ThemeData {
     id: number; // a unique id of the theme
@@ -97,6 +113,14 @@ export interface ActualThemesModal {
     themedarkayu: ThemeData;
     themedarkfalcon: ThemeData;
     themedarkgithub: ThemeData;
+
+    // other light extra themes
+    themelightatom: ThemeData;
+    themelightgruvbox: ThemeData;
+    themelighticeberg: ThemeData;
+    themelightmonokai: ThemeData;
+    themelightpapercolor: ThemeData;
+    themelightstrawberry: ThemeData;
 }
 
 /**
@@ -246,6 +270,56 @@ export const ThemesList: ActualThemesModal = {
         type: 'dark',
         name: 'themedarkpurples',
         placeholder: 'Purples',
+        other: true,
+    },
+
+    // other light extra themes
+    themelightatom: {
+        id: 4001,
+        theme: ThemeLightAtom,
+        type: 'light',
+        name: 'themelightatom',
+        placeholder: 'Atom',
+        other: true,
+    },
+    themelightgruvbox: {
+        id: 4002,
+        theme: ThemeLightGruvbox,
+        type: 'light',
+        name: 'themelightgruvbox',
+        placeholder: 'Gruvbox',
+        other: true,
+    },
+    themelighticeberg: {
+        id: 4003,
+        theme: ThemeLightIceberg,
+        type: 'light',
+        name: 'themelighticeberg',
+        placeholder: 'Iceberg',
+        other: true,
+    },
+    themelightmonokai: {
+        id: 4004,
+        theme: ThemeLightMonokai,
+        type: 'light',
+        name: 'themelightmonokai',
+        placeholder: 'Monokai',
+        other: true,
+    },
+    themelightpapercolor: {
+        id: 4005,
+        theme: ThemeLightPaperColor,
+        type: 'light',
+        name: 'themelightpapercolor',
+        placeholder: 'Paper',
+        other: true,
+    },
+    themelightstrawberry: {
+        id: 4006,
+        theme: ThemeLightStrawberry,
+        type: 'light',
+        name: 'themelightstrawberry',
+        placeholder: 'Strawberry',
         other: true,
     },
 };

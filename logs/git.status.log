@@ -1,35 +1,27 @@
 On branch master
-Your branch is ahead of 'origin/master' by 9 commits.
+Your branch is ahead of 'origin/master' by 10 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   app/themes/main/LightBlue.ts
-	modified:   app/themes/main/LightGreen.ts
-	modified:   app/themes/main/LightPink.ts
-	modified:   app/themes/main/LightRed.ts
-	modified:   app/themes/main/LightYellow.ts
+	modified:   app/interfaces/index.ts
+	modified:   app/themes/main/LightTheme.ts
+	new file:   app/themes/main/ThemeLightAtom.ts
+	new file:   app/themes/main/ThemeLightGruvbox.ts
+	new file:   app/themes/main/ThemeLightIceberg.ts
+	new file:   app/themes/main/ThemeLightMonokai.ts
+	new file:   app/themes/main/ThemeLightPaperColor.ts
+	new file:   app/themes/main/ThemeLightStrawberry.ts
+	modified:   app/themes/main/index.ts
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   app/components/Header/index.tsx
-	modified:   app/interfaces/index.ts
 	modified:   app/screens/HomeScreen.tsx
 	modified:   app/screens/MainNavigation.tsx
 	modified:   app/screens/ThemeScreen.tsx
 	modified:   app/styles/index.ts
-	modified:   app/themes/main/LightTheme.ts
-	modified:   app/themes/main/index.ts
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	app/themes/main/ThemeLightAtom.ts
-	app/themes/main/ThemeLightGruvbox.ts
-	app/themes/main/ThemeLightIceberg.ts
-	app/themes/main/ThemeLightMonokai.ts
-	app/themes/main/ThemeLightPaperColor.ts
-	app/themes/main/ThemeLightStrawberry.ts
 

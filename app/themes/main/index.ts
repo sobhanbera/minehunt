@@ -19,6 +19,13 @@ import ThemeDarkGitHub from './ThemeDarkGitHub';
 import ThemeDarkOneDarkPro from './ThemeDarkOneDarkPro';
 import ThemeDarkPurples from './ThemeDarkPurples';
 
+import ThemeLightAtom from './ThemeLightAtom';
+import ThemeLightGruvbox from './ThemeLightGruvbox';
+import ThemeLightIceberg from './ThemeLightIceberg';
+import ThemeLightMonokai from './ThemeLightMonokai';
+import ThemeLightPaperColor from './ThemeLightPaperColor';
+import ThemeLightStrawberry from './ThemeLightStrawberry';
+
 export {
     // dark themes
     DarkTheme,
@@ -41,4 +48,11 @@ export {
     ThemeDarkGitHub,
     ThemeDarkOneDarkPro,
     ThemeDarkPurples,
+    // light extra themes
+    ThemeLightAtom,
+    ThemeLightGruvbox,
+    ThemeLightIceberg,
+    ThemeLightMonokai,
+    ThemeLightPaperColor,
+    ThemeLightStrawberry,
 };
