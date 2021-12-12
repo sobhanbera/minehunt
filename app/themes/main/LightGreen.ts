@@ -18,14 +18,14 @@ const LightGreenTheme: ThemeColors = {
     light: ['#12ca96'],
     dark: ['#00a878'],
 
-    background: ['#E0E0E0'],
+    background: ['#EFEFEF'],
 
     themecolor: ['#ffffff'],
     themecolorrevert: ['#000000'],
 
     surface: ['#e7e7e7'], // for surface components
     surfacelight: ['#dfdfdf'], // for cards
-    border: ['#cfcfcf'],
+    border: ['#e0e0e0'],
     placeholder: ['#323232'],
     text: ['#101010'],
 
