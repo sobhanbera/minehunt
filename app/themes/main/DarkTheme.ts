@@ -33,8 +33,8 @@ const DarkTheme: ThemeColors = {
     themecolorrevert: ['#FFFFFF'],
 
     surface: ['#050505'], // for surface components
-    surfacelight: ['#21242b'], // for cards
-    border: ['#303030'],
+    surfacelight: ['#10131a'], // for cards
+    border: ['#161616'],
     placeholder: ['#CFCFCF'],
     text: ['#EFEFEF'],
 

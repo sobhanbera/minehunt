@@ -14,46 +14,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {THEME_STORAGE_KEY} from '../constants';
 import ThemeColors from './ThemeProps';
 
-import {DarkTheme as DefaultTheme, LightTheme, DarkPinkTheme} from './main';
-
-export type ThemeType = 'dark' | 'light';
-export type Themes = '' | 'default' | 'dark' | 'light' | 'darkpink'; // here default is dark only.
-interface ActualThemesModal {
-    default: {
-        theme: ThemeColors;
-        type: ThemeType;
-    };
-    dark: {
-        theme: ThemeColors;
-        type: ThemeType;
-    };
-    light: {
-        theme: ThemeColors;
-        type: ThemeType;
-    };
-    darkpink: {
-        theme: ThemeColors;
-        type: ThemeType;
-    };
-}
-const ActualThemes: ActualThemesModal = {
-    default: {
-        theme: DefaultTheme,
-        type: 'dark',
-    },
-    dark: {
-        theme: DefaultTheme,
-        type: 'dark',
-    },
-    light: {
-        theme: LightTheme,
-        type: 'light',
-    },
-    darkpink: {
-        theme: DarkPinkTheme,
-        type: 'dark',
-    },
-};
+import {Themes, ThemeType, ThemesList} from '../interfaces';
 
 /**
  * interface for the context api we are providing through
@@ -61,6 +22,7 @@ const ActualThemes: ActualThemesModal = {
  */
 interface ThemeContextProps {
     theme: ThemeType;
+    themeName: Themes;
     themeColors: ThemeColors;
     setTheme(_theme: Themes): void;
 }
@@ -71,12 +33,16 @@ interface ThemeContextProps {
  */
 const ThemeContext = createContext<ThemeContextProps>({
     theme: 'dark',
-    themeColors: DefaultTheme,
+    themeName: 'dark',
+    themeColors: ThemesList.default.theme,
     setTheme: (_theme: Themes) => {},
 });
 const ThemeProvider = (props: {children: React.ReactChild}) => {
     const [themeType, setThemeType] = useState<ThemeType>('dark');
-    const [themeColor, setThemeColor] = useState<ThemeColors>(DefaultTheme);
+    const [themeName, setThemeName] = useState<Themes>('dark');
+    const [themeColor, setThemeColor] = useState<ThemeColors>(
+        ThemesList.default.theme,
+    );
 
     /**
      * get theme data
@@ -87,11 +53,15 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
 
         if (!tempTheme) {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, 'dark');
-            setThemeColor(DefaultTheme);
+            setThemeColor(ThemesList.default.theme);
             setThemeType('dark');
+            setThemeName('dark');
+            console.log('dark', 'dark');
         } else {
-            setThemeColor(ActualThemes[tempTheme].theme);
-            setThemeType(ActualThemes[tempTheme].type);
+            setThemeColor(ThemesList[tempTheme].theme);
+            setThemeType(ThemesList[tempTheme].type);
+            setThemeName(ThemesList[tempTheme].name);
+            console.log(ThemesList[tempTheme].name, ThemesList[tempTheme].type);
         }
     };
 
@@ -112,6 +82,7 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
 
     const themeValue = {
         theme: themeType,
+        themeName: themeName,
         themeColors: themeColor,
         setTheme: setAppTheme,
     };

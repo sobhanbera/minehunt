@@ -5,18 +5,18 @@
  * @other_editors :
  * @file : Typescript
  *
- * Purpose - apps light 2nd default theme
+ * Purpose - light blue theme
  */
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const LightTheme: ThemeColors = {
+const LightBlueTheme: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
-    main: ['#0F60B6'],
-    light: ['#5a8de9'],
-    dark: ['#003785'],
+    main: ['#2364aa'],
+    light: ['#73bfb8'],
+    dark: ['#3da5d9'],
 
     background: ['#E0E0E0'],
 
@@ -32,4 +32,4 @@ const LightTheme: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default LightTheme;
+export default LightBlueTheme;

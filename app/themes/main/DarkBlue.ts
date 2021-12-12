@@ -5,18 +5,18 @@
  * @other_editors :
  * @file : Typescript
  *
- * Purpose - pinkish theme under dark
+ * Purpose - dark blue theme
  */
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const DarkPinkTheme: ThemeColors = {
+const DarkBlueTheme: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
-    main: ['#EF1559'],
-    light: ['#F9B5AC'],
-    dark: ['#EE7674'],
+    main: ['#03045e'],
+    light: ['#00b4d8'],
+    dark: ['#0077b6'],
 
     background: ['#000000'],
 
@@ -32,4 +32,4 @@ const DarkPinkTheme: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default DarkPinkTheme;
+export default DarkBlueTheme;
