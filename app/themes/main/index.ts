@@ -12,6 +12,13 @@ import LightPinkTheme from './LightPink';
 import LightRedTheme from './LightRed';
 import LightYellowTheme from './LightYellow';
 
+import ThemeDarkAyu from './ThemeDarkAyu';
+import ThemeDarkFalcon from './ThemeDarkFalcon';
+import ThemeDarkGruvbox from './ThemeDarkGruvbox';
+import ThemeDarkGitHub from './ThemeDarkGitHub';
+import ThemeDarkOneDarkPro from './ThemeDarkOneDarkPro';
+import ThemeDarkPurples from './ThemeDarkPurples';
+
 export {
     // dark themes
     DarkTheme,
@@ -27,4 +34,11 @@ export {
     LightPinkTheme,
     LightRedTheme,
     LightYellowTheme,
+    // other extra themes
+    ThemeDarkAyu,
+    ThemeDarkFalcon,
+    ThemeDarkGruvbox,
+    ThemeDarkGitHub,
+    ThemeDarkOneDarkPro,
+    ThemeDarkPurples,
 };

@@ -15,6 +15,14 @@ import {
     LightPinkTheme,
     LightRedTheme,
     LightYellowTheme,
+
+    // other extra themes
+    ThemeDarkAyu,
+    ThemeDarkFalcon,
+    ThemeDarkGitHub,
+    ThemeDarkGruvbox,
+    ThemeDarkOneDarkPro,
+    ThemeDarkPurples,
 } from '../themes/main';
 
 const INTERFACES_MODULE_DETAILS =
@@ -26,7 +34,7 @@ export type ThemeType = 'dark' | 'light';
 // all theme
 export type Themes =
     // default theme
-    | 'default'
+    | 'default' // here default is dark only.
 
     // dark themes
     | 'dark'
@@ -42,14 +50,23 @@ export type Themes =
     | 'lightgreen'
     | 'lightpink'
     | 'lightred'
-    | 'lightyellow'; // here default is dark only.
+    | 'lightyellow'
+
+    // other extra themes
+    | 'themedarkgruvbox'
+    | 'themedarkonedarkpro'
+    | 'themedarkpurples'
+    | 'themedarkayu'
+    | 'themedarkfalcon'
+    | 'themedarkgithub';
 
 export interface ThemeData {
-    id: number;
-    theme: ThemeColors;
-    type: ThemeType;
-    name: Themes;
-    placeholder: string;
+    id: number; // a unique id of the theme
+    theme: ThemeColors; // the theme colors
+    type: ThemeType; // dark or light
+    name: Themes; // theme name
+    placeholder: string; // a name to show to the user
+    other?: boolean; // is the theme belong to any of the theme type and have random colors or unique color pallete
 }
 
 // the interface denoting the actual theme with its data
@@ -72,6 +89,14 @@ export interface ActualThemesModal {
     lightpink: ThemeData;
     lightred: ThemeData;
     lightyellow: ThemeData;
+
+    // other extra themes
+    themedarkgruvbox: ThemeData;
+    themedarkonedarkpro: ThemeData;
+    themedarkpurples: ThemeData;
+    themedarkayu: ThemeData;
+    themedarkfalcon: ThemeData;
+    themedarkgithub: ThemeData;
 }
 
 /**
@@ -172,5 +197,55 @@ export const ThemesList: ActualThemesModal = {
         type: 'light',
         name: 'lightyellow',
         placeholder: 'Light Yellow',
+    },
+
+    // other extra themes
+    themedarkayu: {
+        id: 3001,
+        theme: ThemeDarkAyu,
+        type: 'dark',
+        name: 'themedarkayu',
+        placeholder: 'Ayu',
+        other: true,
+    },
+    themedarkfalcon: {
+        id: 3002,
+        theme: ThemeDarkFalcon,
+        type: 'dark',
+        name: 'themedarkfalcon',
+        placeholder: 'Falcon',
+        other: true,
+    },
+    themedarkgithub: {
+        id: 3003,
+        theme: ThemeDarkGitHub,
+        type: 'dark',
+        name: 'themedarkgithub',
+        placeholder: 'GitHub',
+        other: true,
+    },
+    themedarkgruvbox: {
+        id: 3004,
+        theme: ThemeDarkGruvbox,
+        type: 'dark',
+        name: 'themedarkgruvbox',
+        placeholder: 'Gruvbox',
+        other: true,
+    },
+    themedarkonedarkpro: {
+        id: 3005,
+        theme: ThemeDarkOneDarkPro,
+        type: 'dark',
+        name: 'themedarkonedarkpro',
+        placeholder: 'One Dark Pro',
+        other: true,
+    },
+    themedarkpurples: {
+        id: 3006,
+        theme: ThemeDarkPurples,
+        type: 'dark',
+        name: 'themedarkpurples',
+        placeholder: 'Purples',
+        other: true,
     },
 };

@@ -1,10 +1,19 @@
 On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
+Your branch is ahead of 'origin/master' by 7 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	new file:   test.css
+	modified:   app/interfaces/index.ts
+	new file:   app/themes/main/ThemeDarkAyu.ts
+	new file:   app/themes/main/ThemeDarkFalcon.ts
+	new file:   app/themes/main/ThemeDarkGitHub.ts
+	new file:   app/themes/main/ThemeDarkGruvbox.ts
+	new file:   app/themes/main/ThemeDarkOneDarkPro.ts
+	new file:   app/themes/main/ThemeDarkPurples.ts
+	modified:   app/themes/main/index.ts
+	modified:   logs/git.status.log
+	modified:   logs/prettier.last.log
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
