@@ -12,7 +12,8 @@ import {
     GameScreen,
     ThemeScreen,
     SettingsScreen,
-    TranslateScreen,
+    LanguageScreen,
+    StatisticsScreen,
     TutorialScreen,
     AboutScreen,
 } from './';
@@ -57,13 +58,19 @@ export default function MainNavigation() {
 
                 {/* change language of the app */}
                 <MainStackNavigator.Screen
-                    name="TranslateScreen"
-                    component={TranslateScreen}
+                    name="LanguageScreen"
+                    component={LanguageScreen}
+                />
+
+                {/* change language of the app */}
+                <MainStackNavigator.Screen
+                    name="StatisticsScreen"
+                    component={StatisticsScreen}
                 />
 
                 {/* how to play the game / rules of the game */}
                 <MainStackNavigator.Screen
-                    name="TutorialScreen"
+                    name="TutorialsScreen"
                     component={TutorialScreen}
                 />
 

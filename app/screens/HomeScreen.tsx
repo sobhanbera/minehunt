@@ -108,7 +108,20 @@ export default function HomeScreen(props: Props) {
                             color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
-                    onPress={() => {}}
+                    onPress={() => launchScreen('SettingsScreen')}
+                />
+
+                {/* all settings */}
+                <MenuOption
+                    text="Change Language"
+                    icon={
+                        <Ionicons
+                            name="ios-settings-outline"
+                            size={MEDIUM_ICON_SIZE}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
+                        />
+                    }
+                    onPress={() => launchScreen('LanguageScreen')}
                 />
 
                 <Spacer />
@@ -123,14 +136,13 @@ export default function HomeScreen(props: Props) {
                             color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
-                    onPress={() => {}}
+                    onPress={() => launchScreen('StatisticsScreen')}
                 />
 
                 <Spacer />
 
                 {/* all game rules */}
                 <MenuOption
-                    onPress={() => {}}
                     text="Game Rules"
                     icon={
                         <MaterialIcons
@@ -139,6 +151,7 @@ export default function HomeScreen(props: Props) {
                             color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
+                    onPress={() => launchScreen('TutorialsScreen')}
                 />
 
                 {/* application about section launcher button */}
@@ -151,7 +164,7 @@ export default function HomeScreen(props: Props) {
                             color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
-                    onPress={() => {}}
+                    onPress={() => launchScreen('AboutScreen')}
                 />
 
                 <Spacer />
@@ -166,7 +179,9 @@ export default function HomeScreen(props: Props) {
                             color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
-                    onPress={() => {}}
+                    onPress={() => {
+                        console.log('Ads Removed!');
+                    }}
                 />
             </View>
         </View>

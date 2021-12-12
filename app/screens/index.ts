@@ -6,7 +6,9 @@ import HomeScreen from './HomeScreen';
 
 import SettingsScreen from './SettingsScreen';
 import ThemeScreen from './ThemeScreen';
-import TranslateScreen from './TranslateScreen';
+import LanguageScreen from './LanguageScreen';
+
+import StatisticsScreen from './StatisticsScreen';
 
 import TutorialScreen from './TutorialsScreen';
 import AboutScreen from './AboutScreen';
@@ -18,7 +20,8 @@ export {
     GameScreen,
     SettingsScreen,
     ThemeScreen,
-    TranslateScreen,
+    LanguageScreen,
+    StatisticsScreen,
     TutorialScreen,
     AboutScreen,
 };
