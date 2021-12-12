@@ -10,7 +10,7 @@
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const ThemeGitHub: ThemeColors = {
+const ThemeDarkGitHub: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
@@ -32,4 +32,4 @@ const ThemeGitHub: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default ThemeGitHub;
+export default ThemeDarkGitHub;

@@ -10,7 +10,7 @@
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const ThemeOneDarkPro: ThemeColors = {
+const ThemeDarkOneDarkPro: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
@@ -32,4 +32,4 @@ const ThemeOneDarkPro: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default ThemeOneDarkPro;
+export default ThemeDarkOneDarkPro;

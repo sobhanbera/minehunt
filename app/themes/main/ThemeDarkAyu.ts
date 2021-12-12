@@ -10,7 +10,7 @@
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const ThemeAyu: ThemeColors = {
+const ThemeDarkAyu: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
@@ -32,4 +32,4 @@ const ThemeAyu: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default ThemeAyu;
+export default ThemeDarkAyu;

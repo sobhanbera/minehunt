@@ -1,19 +1,15 @@
 On branch master
-Your branch is ahead of 'origin/master' by 7 commits.
+Your branch is ahead of 'origin/master' by 8 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   app/interfaces/index.ts
-	new file:   app/themes/main/ThemeDarkAyu.ts
-	new file:   app/themes/main/ThemeDarkFalcon.ts
-	new file:   app/themes/main/ThemeDarkGitHub.ts
-	new file:   app/themes/main/ThemeDarkGruvbox.ts
-	new file:   app/themes/main/ThemeDarkOneDarkPro.ts
-	new file:   app/themes/main/ThemeDarkPurples.ts
-	modified:   app/themes/main/index.ts
-	modified:   logs/git.status.log
-	modified:   logs/prettier.last.log
+	modified:   app/themes/main/ThemeDarkAyu.ts
+	modified:   app/themes/main/ThemeDarkFalcon.ts
+	modified:   app/themes/main/ThemeDarkGitHub.ts
+	modified:   app/themes/main/ThemeDarkGruvbox.ts
+	modified:   app/themes/main/ThemeDarkOneDarkPro.ts
+	modified:   app/themes/main/ThemeDarkPurples.ts
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -25,4 +21,13 @@ Changes not staged for commit:
 	modified:   app/styles/index.ts
 	modified:   logs/git.status.log
 	modified:   logs/prettier.last.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app/themes/main/ThemeLightAtom.ts
+	app/themes/main/ThemeLightGruvbox.ts
+	app/themes/main/ThemeLightIceberg.ts
+	app/themes/main/ThemeLightMonokai.ts
+	app/themes/main/ThemeLightPaperColor.ts
+	app/themes/main/ThemeLightStrawberry.ts
 

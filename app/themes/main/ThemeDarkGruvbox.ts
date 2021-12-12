@@ -10,7 +10,7 @@
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const ThemeGruvbox: ThemeColors = {
+const ThemeDarkGruvbox: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
@@ -32,4 +32,4 @@ const ThemeGruvbox: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default ThemeGruvbox;
+export default ThemeDarkGruvbox;

@@ -10,7 +10,7 @@
 
 import ThemeColors, {RequiredCommonColors} from '../ThemeProps';
 
-const ThemeFalcon: ThemeColors = {
+const ThemeDarkFalcon: ThemeColors = {
     /**
      * This is the object for Dark Theme
      */
@@ -32,4 +32,4 @@ const ThemeFalcon: ThemeColors = {
     ...RequiredCommonColors,
 };
 
-export default ThemeFalcon;
+export default ThemeDarkFalcon;
