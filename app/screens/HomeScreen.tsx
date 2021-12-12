@@ -137,7 +137,9 @@ export default function HomeScreen(props: Props) {
     };
 
     const startNewGame = (gameData: GameData) => {
-        props.navigation.navigate('GameScreen', gameData);
+        props.navigation.navigate('GameScreen', {
+            gameData: gameData,
+        });
     };
 
     return (
