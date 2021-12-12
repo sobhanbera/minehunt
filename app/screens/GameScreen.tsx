@@ -135,7 +135,7 @@ const GameScreen = (props: Props) => {
             <Animated.View
                 style={[
                     {
-                        backgroundColor: themeColors.surface[0],
+                        backgroundColor: themeColors.light[0] + '10',
                         zIndex: 1,
                         flex: 1,
                         flexDirection: 'column',
