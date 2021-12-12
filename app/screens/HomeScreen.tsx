@@ -37,7 +37,7 @@ export default function HomeScreen(props: Props) {
                         style={[
                             styles.title,
                             {
-                                color: themeColors.light[0] + '',
+                                color: themeColors.main[0] + '',
                             },
                         ]}>
                         MINE HUNT
@@ -117,7 +117,7 @@ export default function HomeScreen(props: Props) {
                         text="Change Language"
                         icon={
                             <Ionicons
-                                name="ios-settings-outline"
+                                name="ios-language-outline"
                                 size={MEDIUM_ICON_SIZE}
                                 color={themeColors.themecolorrevert[0] + 'EF'}
                             />

@@ -18,21 +18,20 @@ interface Props {
     title: string;
     morebutton?: React.ReactNode;
     goBack?: boolean;
-    color: string;
     backgroundColor?: string;
     borderColor?: string;
     onPress?: Function;
     style?: StyleProp<ViewStyle>;
 }
 const Header = (props: Props) => {
-    const {border, surfacelight} = useTheme().themeColors;
+    const {border, themecolorrevert, background} = useTheme().themeColors;
 
     return (
         <View
             style={[
                 styles.header,
                 {
-                    backgroundColor: props.backgroundColor || surfacelight[0],
+                    backgroundColor: props.backgroundColor || background[0],
                     borderBottomColor: props.borderColor || border[0],
                     borderBottomWidth: 1,
                     marginTop: DEVICE_STATUSBAR_HEIGHT_CONSTANT, // the height of the statusbar of the device
@@ -42,7 +41,7 @@ const Header = (props: Props) => {
             <Pressable onPress={() => props.navigation.goBack()}>
                 <Entypo
                     name="chevron-thin-left"
-                    color={props.color}
+                    color={themecolorrevert[0] + 'DF'}
                     size={20}
                 />
             </Pressable>
@@ -50,7 +49,7 @@ const Header = (props: Props) => {
                 style={[
                     styles.title,
                     {
-                        color: props.color,
+                        color: themecolorrevert[0] + 'DF',
                         paddingHorizontal: 20,
                     },
                 ]}
@@ -74,6 +73,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
+        fontWeight: '600',
     },
 });
 
