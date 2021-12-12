@@ -16,7 +16,7 @@ interface Props {
     };
 }
 export default function HomeScreen(props: Props) {
-    const {theme} = useTheme();
+    const {themeColors} = useTheme();
 
     const launchScreen = (screenName: string, data?: Object) => {
         props.navigation.navigate(screenName, data);
@@ -26,7 +26,7 @@ export default function HomeScreen(props: Props) {
         <View
             style={[
                 {
-                    backgroundColor: theme.background[0],
+                    backgroundColor: themeColors.background[0],
                 },
                 appstyles.flex,
                 appstyles.statusBar,
@@ -36,7 +36,7 @@ export default function HomeScreen(props: Props) {
                     style={[
                         styles.title,
                         {
-                            color: theme.light[0] + '',
+                            color: themeColors.light[0] + '',
                         },
                     ]}>
                     MINE HUNT
@@ -49,7 +49,7 @@ export default function HomeScreen(props: Props) {
                         <AntDesign
                             name="caretright"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -64,7 +64,7 @@ export default function HomeScreen(props: Props) {
                         <AntDesign
                             name="plus"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -77,7 +77,7 @@ export default function HomeScreen(props: Props) {
                         <MaterialIcons
                             name="dashboard-customize"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -92,7 +92,7 @@ export default function HomeScreen(props: Props) {
                         <Ionicons
                             name="ios-sunny-outline"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => launchScreen('ThemeScreen')}
@@ -105,7 +105,7 @@ export default function HomeScreen(props: Props) {
                         <Ionicons
                             name="ios-settings-outline"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -120,7 +120,7 @@ export default function HomeScreen(props: Props) {
                         <Ionicons
                             name="ios-stats-chart"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -136,7 +136,7 @@ export default function HomeScreen(props: Props) {
                         <MaterialIcons
                             name="rule"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                 />
@@ -148,7 +148,7 @@ export default function HomeScreen(props: Props) {
                         <MaterialIcons
                             name="info-outline"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}
@@ -163,7 +163,7 @@ export default function HomeScreen(props: Props) {
                         <MaterialIcons
                             name="monetization-on"
                             size={MEDIUM_ICON_SIZE}
-                            color={theme.themecolorrevert[0] + 'EF'}
+                            color={themeColors.themecolorrevert[0] + 'EF'}
                         />
                     }
                     onPress={() => {}}

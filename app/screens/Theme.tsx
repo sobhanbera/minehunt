@@ -5,13 +5,13 @@ import {appstyles} from '../styles';
 import {useTheme} from '../contexts';
 
 export default function ThemeScreen() {
-    const {theme} = useTheme();
+    const {themeColors} = useTheme();
 
     return (
         <View
             style={[
                 {
-                    backgroundColor: theme.background[0],
+                    backgroundColor: themeColors.background[0],
                 },
                 appstyles.flex,
                 appstyles.statusBar,

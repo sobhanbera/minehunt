@@ -16,18 +16,43 @@ import ThemeColors from './ThemeProps';
 
 import {DarkTheme as DefaultTheme, LightTheme, DarkPinkTheme} from './main';
 
+export type ThemeType = 'dark' | 'light';
 export type Themes = '' | 'default' | 'dark' | 'light' | 'darkpink'; // here default is dark only.
 interface ActualThemesModal {
-    default: ThemeColors;
-    dark: ThemeColors;
-    light: ThemeColors;
-    darkpink: ThemeColors;
+    default: {
+        theme: ThemeColors;
+        type: ThemeType;
+    };
+    dark: {
+        theme: ThemeColors;
+        type: ThemeType;
+    };
+    light: {
+        theme: ThemeColors;
+        type: ThemeType;
+    };
+    darkpink: {
+        theme: ThemeColors;
+        type: ThemeType;
+    };
 }
 const ActualThemes: ActualThemesModal = {
-    default: DefaultTheme,
-    dark: DefaultTheme,
-    light: LightTheme,
-    darkpink: DarkPinkTheme,
+    default: {
+        theme: DefaultTheme,
+        type: 'dark',
+    },
+    dark: {
+        theme: DefaultTheme,
+        type: 'dark',
+    },
+    light: {
+        theme: LightTheme,
+        type: 'light',
+    },
+    darkpink: {
+        theme: DarkPinkTheme,
+        type: 'dark',
+    },
 };
 
 /**
@@ -35,7 +60,8 @@ const ActualThemes: ActualThemesModal = {
  * this component
  */
 interface ThemeContextProps {
-    theme: ThemeColors;
+    theme: ThemeType;
+    themeColors: ThemeColors;
     setTheme(_theme: Themes): void;
 }
 /**
@@ -44,11 +70,13 @@ interface ThemeContextProps {
  * @c - custom theme
  */
 const ThemeContext = createContext<ThemeContextProps>({
-    theme: DefaultTheme,
+    theme: 'dark',
+    themeColors: DefaultTheme,
     setTheme: (_theme: Themes) => {},
 });
 const ThemeProvider = (props: {children: React.ReactChild}) => {
-    const [theme, setTheme] = useState<ThemeColors>(DefaultTheme);
+    const [themeType, setThemeType] = useState<ThemeType>('dark');
+    const [themeColor, setThemeColor] = useState<ThemeColors>(DefaultTheme);
 
     /**
      * get theme data
@@ -59,9 +87,11 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
 
         if (!tempTheme) {
             await AsyncStorage.setItem(THEME_STORAGE_KEY, 'dark');
-            setTheme(DefaultTheme);
+            setThemeColor(DefaultTheme);
+            setThemeType('dark');
         } else {
-            setTheme(ActualThemes[tempTheme]);
+            setThemeColor(ActualThemes[tempTheme].theme);
+            setThemeType(ActualThemes[tempTheme].type);
         }
     };
 
@@ -81,7 +111,8 @@ const ThemeProvider = (props: {children: React.ReactChild}) => {
     }, []);
 
     const themeValue = {
-        theme,
+        theme: themeType,
+        themeColors: themeColor,
         setTheme: setAppTheme,
     };
 

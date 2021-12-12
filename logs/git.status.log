@@ -1,13 +1,14 @@
 On branch master
-Your branch is ahead of 'origin/master' by 17 commits.
-  (use "git push" to publish your local commits)
+Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   app/constants/index.ts
+	modified:   app/components/IconText/index.tsx
+	modified:   app/components/MenuOption/index.tsx
 	modified:   app/screens/Home.tsx
+	modified:   app/screens/MainNavigation.tsx
 	modified:   app/screens/Theme.tsx
-	modified:   app/styles/index.ts
+	modified:   app/themes/ThemeProvider.tsx
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)

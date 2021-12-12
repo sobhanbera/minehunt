@@ -10,14 +10,14 @@ interface Props {
     onPress: Function;
 }
 const MenuOption = (props: Props) => {
-    const {theme} = useTheme();
+    const {themeColors} = useTheme();
 
     return (
         <TouchableHighlight
             style={styles.menuOption}
             onPress={() => props.onPress()}
             activeOpacity={0.23}
-            underlayColor={theme.main[0] + 'BF'}>
+            underlayColor={themeColors.main[0] + 'BF'}>
             <IconText icon={props.icon} text={props.text} />
         </TouchableHighlight>
     );

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const IconText = (props: Props) => {
-    const {theme} = useTheme();
+    const {themeColors} = useTheme();
 
     return (
         <View style={styles.iconText}>
@@ -18,7 +18,7 @@ const IconText = (props: Props) => {
                 style={[
                     styles.text,
                     {
-                        color: theme.themecolorrevert[0] + 'EF',
+                        color: themeColors.themecolorrevert[0] + 'EF',
                     },
                 ]}>
                 {props.text}
