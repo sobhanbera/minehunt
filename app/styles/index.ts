@@ -20,6 +20,13 @@ const globalStyles = StyleSheet.create({
     statusBar: {
         paddingTop: DEVICE_STATUSBAR_HEIGHT_CONSTANT,
     },
+
+    titleText: {
+        fontSize: 18,
+        fontWeight: '500',
+        paddingHorizontal: 15,
+        paddingVertical: 12,
+    },
 });
 
 export {globalStyles as appstyles};
