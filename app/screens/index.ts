@@ -2,16 +2,16 @@ const SCREEN_MODULE_DETAILS =
     'all screen and navigation related exports exists here.';
 export default SCREEN_MODULE_DETAILS;
 
-import HomeScreen from './Home';
+import HomeScreen from './HomeScreen';
 
-import SettingsScreen from './Settings';
-import ThemeScreen from './Theme';
-import TranslateScreen from './Translate';
+import SettingsScreen from './SettingsScreen';
+import ThemeScreen from './ThemeScreen';
+import TranslateScreen from './TranslateScreen';
 
-import TutorialScreen from './Tutorial';
-import AboutScreen from './About';
+import TutorialScreen from './TutorialsScreen';
+import AboutScreen from './AboutScreen';
 
-import GameScreen from './Game';
+import GameScreen from './GameScreen';
 
 export {
     HomeScreen,
