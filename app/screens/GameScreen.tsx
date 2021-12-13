@@ -1,12 +1,18 @@
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable curly */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {View, Animated, PanResponder, StatusBar, Text} from 'react-native';
+import {
+    View,
+    Animated,
+    PanResponder,
+    StatusBar,
+    Text,
+    ScrollView,
+} from 'react-native';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
-// import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
 
 import {Header} from '../components';
 import {useTheme} from '../contexts';
@@ -25,6 +31,7 @@ import {
     getCellID,
     getCellRowIndexFromID,
 } from '../utils';
+// import {PinchGestureHandler} from 'react-native-gesture-handler';
 
 // const {Value} = Animated;
 
@@ -50,6 +57,7 @@ const GameScreen = (props: Props) => {
      */
     const pan = useState(new Animated.ValueXY())[0];
     // console.log(pan.getLayout(), pan.getTranslateTransform());
+    // const scale = new Animated.Value(1);
     /**
      * the actual pan responder object
      * this is used to perform actions like to move the pan value or update it
@@ -221,12 +229,14 @@ const GameScreen = (props: Props) => {
     }
 
     function openCell(cell: CellData) {
-        console.log(cell.value);
         if (!gameOver || !gameWon) {
+            console.log(cell.value);
+
             let localGrid: CellData[][] = grid;
 
             const iIndex = getCellRowIndexFromID(cell);
             const jIndex = getCellColumnIndexFromID(cell);
+            console.log(iIndex, jIndex);
 
             if (cell.value === -1) {
                 // game over
@@ -285,6 +295,19 @@ const GameScreen = (props: Props) => {
                 }}
             />
 
+            {/* <ScrollView pinchGestureEnabled nestedScrollEnabled>
+                <ScrollView pinchGestureEnabled horizontal={true}>
+                    <PinchGestureHandler
+                        onGestureEvent={Animated.event(
+                            [
+                                {
+                                    nativeEvent: {
+                                        scale: scale,
+                                    },
+                                },
+                            ],
+                            {useNativeDriver: true},
+                        )}> */}
             <Animated.View
                 style={[
                     {
@@ -294,12 +317,20 @@ const GameScreen = (props: Props) => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         alignSelf: 'center',
-                        // width: 10000,
-                        // height: 1000,
-                        transform: [{translateX: pan.x}, {translateY: pan.y}],
+                        // width: 1000,
+                        height: 1000,
+                        padding: 100,
+                        zIndex: 1,
+                        transform: [
+                            // {scale},
+                            {translateX: pan.x},
+                            {translateY: pan.y},
+                        ],
                     },
                 ]}
-                {...panResponder.panHandlers}>
+                {...panResponder.panHandlers}
+                //
+            >
                 {grid.length >= 1 && grid[0].length >= 1
                     ? grid.map((row: CellData[], _) => {
                           return (
@@ -337,6 +368,9 @@ const GameScreen = (props: Props) => {
                       })
                     : null}
             </Animated.View>
+            {/* </PinchGestureHandler>
+                </ScrollView>
+            </ScrollView> */}
         </View>
     );
 };
