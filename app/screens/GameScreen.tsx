@@ -211,9 +211,9 @@ const GameScreen = (props: Props) => {
             numOFBombs--;
         }
 
-        for (let i = 0; i < gameData.rows; i++) {
-            for (let j = 0; j < gameData.columns; j++) {}
-        }
+        // for (let i = 0; i < gameData.rows; i++) {
+        //     for (let j = 0; j < gameData.columns; j++) {}
+        // }
 
         // let str = '\n\nGAME GENERATED THIS TIME\n';
         // for (let i in localGrid) {
