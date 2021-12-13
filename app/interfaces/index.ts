@@ -426,11 +426,18 @@ export const GameTypesList: GameData[] = [
         rows: 50,
         columns: 50,
     },
-    {
-        id: 7,
-        difficulty: 'legend',
-        mines: 596,
-        rows: 63,
-        columns: 63,
-    },
+    // {
+    //     id: 7,
+    //     difficulty: 'legend',
+    //     mines: 596,
+    //     rows: 63,
+    //     columns: 63,
+    // },
 ];
+
+export interface CellData {
+    id: string;
+    open: boolean;
+    flag: boolean;
+    value: number;
+}

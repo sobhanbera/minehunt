@@ -1,3 +1,6 @@
+import {CellData} from '../interfaces';
+import {CELL_ID_SPLITTING_CHARACTER} from '../constants';
+
 const UTILS_MODULE_DETAILS = 'A';
 export default UTILS_MODULE_DETAILS;
 
@@ -61,4 +64,16 @@ export function formatSecondsToTimer(seconds: number): string {
     return `${formateNumberToHave2Digits(hour)}:${formateNumberToHave2Digits(
         min,
     )}:${formateNumberToHave2Digits(seconds)}`;
+}
+
+export function getCellID(i: number, j: number) {
+    return `${i}${CELL_ID_SPLITTING_CHARACTER}${j}`;
+}
+
+export function getCellRowIndexFromID(cell: CellData): number {
+    return Number(cell.id.split(CELL_ID_SPLITTING_CHARACTER)[0]);
+}
+
+export function getCellColumnIndexFromID(cell: CellData): number {
+    return Number(cell.id.split(CELL_ID_SPLITTING_CHARACTER)[1]);
 }
