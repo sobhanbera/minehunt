@@ -3,14 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {
-    View,
-    Animated,
-    PanResponder,
-    StatusBar,
-    Text,
-    ScrollView,
-} from 'react-native';
+import {View, Animated, PanResponder, StatusBar, Text} from 'react-native';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -31,7 +24,6 @@ import {
     getCellID,
     getCellRowIndexFromID,
 } from '../utils';
-// import {PinchGestureHandler} from 'react-native-gesture-handler';
 
 // const {Value} = Animated;
 
@@ -295,19 +287,6 @@ const GameScreen = (props: Props) => {
                 }}
             />
 
-            {/* <ScrollView pinchGestureEnabled nestedScrollEnabled>
-                <ScrollView pinchGestureEnabled horizontal={true}>
-                    <PinchGestureHandler
-                        onGestureEvent={Animated.event(
-                            [
-                                {
-                                    nativeEvent: {
-                                        scale: scale,
-                                    },
-                                },
-                            ],
-                            {useNativeDriver: true},
-                        )}> */}
             <Animated.View
                 style={[
                     {
@@ -368,9 +347,6 @@ const GameScreen = (props: Props) => {
                       })
                     : null}
             </Animated.View>
-            {/* </PinchGestureHandler>
-                </ScrollView>
-            </ScrollView> */}
         </View>
     );
 };

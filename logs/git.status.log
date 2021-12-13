@@ -1,10 +1,12 @@
 On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
+Your branch is ahead of 'origin/master' by 7 commits.
   (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   app/screens/GameScreen.tsx
+	modified:   logs/git.status.log
+	modified:   logs/prettier.last.log
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
