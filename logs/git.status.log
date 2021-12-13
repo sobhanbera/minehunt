@@ -1,11 +1,12 @@
 On branch master
-Your branch is up to date with 'origin/master'.
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   app/constants/index.ts
-	modified:   app/interfaces/index.ts
-	modified:   app/utils/index.ts
+	modified:   logs/git.status.log
+	modified:   logs/prettier.last.log
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)

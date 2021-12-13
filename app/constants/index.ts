@@ -24,7 +24,7 @@ export const DEVICE_SCREEN_HEIGHT = Dimensions.get('screen').height;
 
 export const HEADER_HEIGHT = 50; // maximum height of a header should have
 
-export const GAME_GRID_ALL_DIRECTION_SNAP_THRESHOLD = 40;
+export const GAME_GRID_ALL_DIRECTION_SNAP_THRESHOLD = 35;
 
 export const GAME_GRID_LEFT_SNAP_THRESHOLD =
     GAME_GRID_ALL_DIRECTION_SNAP_THRESHOLD; // a limit after which the grid could not be moved furthure in the negative X-axis
