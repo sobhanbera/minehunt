@@ -66,14 +66,30 @@ export function formatSecondsToTimer(seconds: number): string {
     )}:${formateNumberToHave2Digits(seconds)}`;
 }
 
+/**
+ * get formatted and unique id for every cell
+ * @param i row index
+ * @param j column index
+ * @returns returns a simple formatted id string including both i and j
+ */
 export function getCellID(i: number, j: number) {
     return `${i}${CELL_ID_SPLITTING_CHARACTER}${j}`;
 }
 
+/**
+ * function to get the ith index or the row in which the cell exists
+ * @param cell cell data of the cell
+ * @returns row index
+ */
 export function getCellRowIndexFromID(cell: CellData): number {
     return Number(cell.id.split(CELL_ID_SPLITTING_CHARACTER)[0]);
 }
 
+/**
+ * function to get the jth index or the column in which the cell exists
+ * @param cell cell data of the cell
+ * @returns column index
+ */
 export function getCellColumnIndexFromID(cell: CellData): number {
     return Number(cell.id.split(CELL_ID_SPLITTING_CHARACTER)[1]);
 }

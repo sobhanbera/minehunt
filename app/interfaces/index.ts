@@ -366,11 +366,15 @@ export const LanguagesList: LanguageData[] = [
 type GameDifficulties =
     | 'beginner'
     | 'easy'
+    | 'easy #2'
     | 'medium'
+    | 'intermediate'
+    | 'intermediate #2'
+    | 'intermediate #3'
+    | 'intermediate #4'
     | 'advance'
     | 'expert'
     | 'professional'
-    | 'legend'
     | 'custom';
 
 export type GameType = 'custom' | 'new' | '';
@@ -387,52 +391,80 @@ export const GameTypesList: GameData[] = [
     {
         id: 1,
         difficulty: 'beginner',
-        mines: 6,
-        rows: 6,
-        columns: 6,
+        mines: 10,
+        rows: 8,
+        columns: 8,
     },
     {
         id: 2,
         difficulty: 'easy',
-        mines: 16,
+        mines: 10,
+        rows: 9,
+        columns: 9,
+    },
+    {
+        id: 3,
+        difficulty: 'easy #2',
+        mines: 10,
         rows: 10,
         columns: 10,
     },
     {
-        id: 3,
+        id: 4,
         difficulty: 'medium',
-        mines: 47,
+        mines: 40,
+        rows: 13,
+        columns: 15,
+    },
+    {
+        id: 5,
+        difficulty: 'intermediate',
+        mines: 40,
+        rows: 14,
+        columns: 15,
+    },
+    {
+        id: 6,
+        difficulty: 'intermediate #2',
+        mines: 40,
+        rows: 14,
+        columns: 16,
+    },
+    {
+        id: 7,
+        difficulty: 'intermediate #3',
+        mines: 40,
+        rows: 15,
+        columns: 16,
+    },
+    {
+        id: 8,
+        difficulty: 'intermediate #4',
+        mines: 40,
         rows: 16,
         columns: 16,
     },
     {
-        id: 4,
+        id: 9,
         difficulty: 'advance',
-        mines: 94,
-        rows: 25,
-        columns: 25,
+        mines: 99,
+        rows: 18,
+        columns: 30,
     },
     {
-        id: 5,
+        id: 10,
         difficulty: 'expert',
-        mines: 208,
-        rows: 36,
-        columns: 36,
+        mines: 99,
+        rows: 24,
+        columns: 24,
     },
     {
-        id: 6,
+        id: 11,
         difficulty: 'professional',
-        mines: 400,
+        mines: 300,
         rows: 50,
         columns: 50,
     },
-    // {
-    //     id: 7,
-    //     difficulty: 'legend',
-    //     mines: 596,
-    //     rows: 63,
-    //     columns: 63,
-    // },
 ];
 
 export interface CellData {
