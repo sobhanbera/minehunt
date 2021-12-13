@@ -1,3 +1,4 @@
+/* eslint-disable curly */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
@@ -117,58 +118,6 @@ const GameScreen = (props: Props) => {
         generateGame();
     }, []);
 
-    function updateAdjacentCells(localGrid: CellData[][], cell: CellData) {
-        // this if condition is not needed since we are only calling this after cheking this once
-        // but till we have to use to sake of some bugs
-        const iIndex = getCellRowIndexFromID(cell);
-        const jIndex = getCellColumnIndexFromID(cell);
-        if (localGrid[iIndex][jIndex].value === -1) {
-            if (iIndex > 0) {
-                if (jIndex > 0) {
-                    if (localGrid[iIndex - 1][jIndex - 1].value !== -1) {
-                        localGrid[iIndex - 1][jIndex - 1].value++;
-                    }
-                }
-                if (localGrid[iIndex - 1][jIndex].value !== -1) {
-                    localGrid[iIndex - 1][jIndex].value++;
-                }
-                if (jIndex < gameData.columns - 1) {
-                    if (localGrid[iIndex - 1][jIndex + 1].value !== -1) {
-                        localGrid[iIndex - 1][jIndex + 1].value++;
-                    }
-                }
-            }
-
-            if (jIndex > 0) {
-                if (localGrid[iIndex][jIndex - 1].value !== -1) {
-                    localGrid[iIndex][jIndex - 1].value++;
-                }
-            }
-
-            if (jIndex < gameData.columns - 1) {
-                if (localGrid[iIndex][jIndex + 1].value !== -1) {
-                    localGrid[iIndex][jIndex + 1].value++;
-                }
-            }
-
-            if (iIndex < gameData.rows - 1) {
-                if (jIndex > 0) {
-                    if (localGrid[iIndex + 1][jIndex - 1].value !== -1) {
-                        localGrid[iIndex + 1][jIndex - 1].value++;
-                    }
-                }
-                if (localGrid[iIndex + 1][jIndex].value !== -1) {
-                    localGrid[iIndex + 1][jIndex].value++;
-                }
-                if (jIndex < 4) {
-                    if (localGrid[iIndex + 1][jIndex + 1].value !== -1) {
-                        localGrid[iIndex + 1][jIndex + 1].value++;
-                    }
-                }
-            }
-        }
-    }
-
     /**
      * function which will be used to generate all the grid/cells of the game
      * this function will generate data where will the mines and no mine cell will exist
@@ -200,6 +149,7 @@ const GameScreen = (props: Props) => {
         while (numOFBombs) {
             randomI = Math.floor(Math.random() * gameData.rows);
             randomJ = Math.floor(Math.random() * gameData.columns);
+
             if (localGrid[randomI][randomJ].value === -1) {
                 continue;
             }
@@ -207,13 +157,54 @@ const GameScreen = (props: Props) => {
                 ...localGrid[randomI][randomJ],
                 value: -1,
             };
-            updateAdjacentCells(localGrid, localGrid[randomI][randomJ]);
+            // updateAdjacentCells(localGrid, localGrid[randomI][randomJ]);
             numOFBombs--;
         }
 
-        // for (let i = 0; i < gameData.rows; i++) {
-        //     for (let j = 0; j < gameData.columns; j++) {}
-        // }
+        for (let i = 0; i < gameData.rows; i++) {
+            for (let j = 0; j < gameData.columns; j++) {
+                // if the adjacent value is not updated then update it
+                if (localGrid[i][j].value === 0) {
+                    if (i > 0) {
+                        if (j > 0)
+                            if (localGrid[i - 1][j - 1].value === -1)
+                                // top left cell
+                                localGrid[i][j].value++;
+                        if (localGrid[i - 1][j].value === -1)
+                            // top middle or top cell
+                            localGrid[i][j].value++;
+                        if (j < gameData.columns - 1)
+                            if (localGrid[i - 1][j + 1].value === -1)
+                                // top right cell
+                                localGrid[i][j].value++;
+                    }
+
+                    if (j > 0)
+                        if (localGrid[i][j - 1].value === -1)
+                            // left cell
+                            localGrid[i][j].value++;
+
+                    if (j < gameData.columns - 1)
+                        if (localGrid[i][j + 1].value === -1)
+                            // right cell
+                            localGrid[i][j].value++;
+
+                    if (i < gameData.rows - 1) {
+                        if (j > 0)
+                            if (localGrid[i + 1][j - 1].value === -1)
+                                // bottom left cell
+                                localGrid[i][j].value++;
+                        if (localGrid[i + 1][j].value === -1)
+                            // bottom middle or bottom cell
+                            localGrid[i][j].value++;
+                        if (j < 4)
+                            if (localGrid[i + 1][j + 1].value === -1)
+                                // bottom right cell
+                                localGrid[i][j].value++;
+                    }
+                }
+            }
+        }
 
         // let str = '\n\nGAME GENERATED THIS TIME\n';
         // for (let i in localGrid) {
