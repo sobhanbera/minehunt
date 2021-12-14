@@ -12,6 +12,7 @@ import {
 import Entypo from 'react-native-vector-icons/Entypo';
 import {
     DEVICE_STATUSBAR_HEIGHT_CONSTANT,
+    HEADER_HEIGHT,
     MEDIUM_ICON_SIZE,
 } from '../../constants';
 import {useTheme} from '../../contexts';
@@ -72,7 +73,7 @@ const Header = (props: Props) => {
 const styles = StyleSheet.create({
     header: {
         width: '100%',
-        height: 50,
+        height: HEADER_HEIGHT,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',

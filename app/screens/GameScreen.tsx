@@ -3,7 +3,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {View, Animated, PanResponder, StatusBar, Text} from 'react-native';
+import {
+    View,
+    Animated,
+    PanResponder,
+    StatusBar,
+    Text,
+    Dimensions,
+} from 'react-native';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
@@ -16,6 +23,7 @@ import {
     GAME_GRID_RIGHT_SNAP_THRESHOLD,
     GAME_GRID_UP_SNAP_THRESHOLD,
     GAME_GRID_DOWN_SNAP_THRESHOLD,
+    HEADER_HEIGHT,
 } from '../constants';
 import {GameData, CellData} from '../interfaces';
 import {
@@ -222,24 +230,25 @@ const GameScreen = (props: Props) => {
 
     function openCell(cell: CellData) {
         if (!gameOver || !gameWon) {
-            console.log(cell.value);
-
             let localGrid: CellData[][] = grid;
 
             const iIndex = getCellRowIndexFromID(cell);
             const jIndex = getCellColumnIndexFromID(cell);
-            console.log(iIndex, jIndex);
+            console.log(cell.value, iIndex, jIndex);
 
             if (cell.value === -1) {
                 // game over
             } else if (cell.flag) {
                 // cell is flagged so un-flag it
                 localGrid[iIndex][jIndex].flag = false;
+                console.log('yes');
             } else if (!cell.open) {
                 // open the cell since it is not opened yet
                 if (localGrid[iIndex][jIndex].flag) {
                     localGrid[iIndex][jIndex].flag = false;
+                    console.log('no2');
                 }
+                console.log('no');
             }
 
             setGrid(localGrid);
@@ -290,14 +299,15 @@ const GameScreen = (props: Props) => {
             <Animated.View
                 style={[
                     {
-                        // flex: 1,
+                        flex: 1,
                         backgroundColor: themeColors.light[0] + '10',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
                         alignSelf: 'center',
-                        // width: 1000,
-                        height: 1000,
+                        alignContent: 'center',
+                        width: 2000,
+                        // height: 2000,
                         padding: 100,
                         zIndex: 1,
                         transform: [
@@ -319,6 +329,7 @@ const GameScreen = (props: Props) => {
                                       flexDirection: 'row',
                                   }}>
                                   {row.map((cell: CellData) => {
+                                      if (!cell.flag) console.log(cell);
                                       return (
                                           <Text
                                               key={cell.id}
